@@ -30,7 +30,7 @@
 <h1>Books</h1>
 <br>
 
-<table class="table table-striped table-hover table-condensed">
+<table id="bookTable" class="table table-striped table-hover table-condensed">
     <thead class="blue">
         <tr>
              <th>Title</th>
@@ -127,6 +127,10 @@
     </div>
 
 </form>
-
+<script src="js/tablesort.min.js"></script>
+<script>
+// tablesort plug in from https://github.com/tristen/tablesort //
+  new Tablesort(document.getElementById('bookTable'));
+</script>
 </body>
 </html>
