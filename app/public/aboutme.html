@@ -38,17 +38,27 @@
 <br><br>
 
 <p>
-<strong>Name: </strong> Annie Coleman
-<br>
-<strong>Country of Origin: </strong> United States
-<br>
-<strong>Birthdate: </strong> January 21st
-<br>
-<strong>Age: </strong> 27
-<br>
-<strong>Email: </strong> <a href="mailto:annie.coleman96@example.com">annie.coleman96@example.com</a>
+  <div id="randomProfileApp">
+     <span> Name: {{profile.name}} </span> <br>
+     <span> Country: {{profile.country}} </span> <br>
+     <span> Birthdate: {{profile.dob}} </span> <br>
+     <span> Age: {{profile.age}} </span> <br>
+     <span> Email: <a href="{{profile.email}}"></a> </span>
+
+    <strong>Name: </strong> Annie Coleman
+    <br>
+    <strong>Country of Origin: </strong> United States
+    <br>
+    <strong>Birthdate: </strong> January 21st
+    <br>
+    <strong>Age: </strong> 27
+    <br>
+    <strong>Email: </strong> <a href="mailto:annie.coleman96@example.com">annie.coleman96@example.com</a>
+  </div>
 </p>
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/profile.app.js"></script>
 
 </body>
 </html>
