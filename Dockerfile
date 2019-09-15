@@ -2,8 +2,8 @@ FROM php:7.3.8-apache
 
 LABEL maintainer="Hayley Madura"
 
-COPY public /srv/app/public
+COPY ./app /srv/app
 
-COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY app/public/docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 ADD . /

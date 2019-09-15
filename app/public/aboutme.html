@@ -30,35 +30,19 @@
 <h1> About Me </h1>
 <br>
 
-<a target="_blank" href="img/selfPhoto.jpg">
-  <img src="img/selfPhoto.jpg" alt="Self Photo" width="200">
-  <br>
-  <link href="https://randomuser.me/photos"> <small> <i> Source: Randomuser.me </i> </small>
-</a>
-<br><br>
-
-<p>
-  <div id="randomProfileApp">
-     <span> Name: {{profile.name}} </span> <br>
-     <span> Country: {{profile.country}} </span> <br>
-     <span> Birthdate: {{profile.dob}} </span> <br>
-     <span> Age: {{profile.age}} </span> <br>
-     <span> Email: <a href="{{profile.email}}"></a> </span>
-
-    <strong>Name: </strong> Annie Coleman
-    <br>
-    <strong>Country of Origin: </strong> United States
-    <br>
-    <strong>Birthdate: </strong> January 21st
-    <br>
-    <strong>Age: </strong> 27
-    <br>
-    <strong>Email: </strong> <a href="mailto:annie.coleman96@example.com">annie.coleman96@example.com</a>
-  </div>
-</p>
+<div id="randomUserApp">
+<span><a :href="users.picture.large" ><img :src="users.picture.large" alt="profile picture"></a> </span> <br>
+      <link href="https://randomuser.me/photos"> <small> <i> Source: Randomuser.me </i> </small>
+    <br><br>
+     <strong>Name: </strong> <span> {{users.name.first}} {{users.name.last}} </span> <br>
+     <strong>Country of Origin: </strong> <span> {{users.nat}} </span> <br>
+     <strong>Birthdate: </strong> <span> {{users.dob.date}} </span> <br>
+     <strong>Age: </strong> <span> {{users.dob.age}} </span> <br>
+    <strong>Email: </strong> <span> <a :href="'mailto:'+ users.email">{{users.email}}</a> </span> <br>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/profile.app.js"></script>
+<script src="js/users.app.js"></script>
 
 </body>
 </html>
