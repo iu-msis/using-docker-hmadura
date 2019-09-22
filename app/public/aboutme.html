@@ -30,10 +30,13 @@
 <h1> About Me </h1>
 <br>
 
-<!-- code from stack overflow (don't use this) !-->
+<!--button code from stack overflow!-->
 
 <div id="randomUserApp">
-<div id="refreshButton"> <button v-on:click="fetchUsers"> Refresh </button> <br> </div>
+<form v-on:submit.prevent="fetchUsers()" id="refreshButton">
+  <button type="submit"> Refresh Profile </button>
+</form>
+<br>
 <span><a :href="users.picture.large" ><img :src="users.picture.large" alt="profile picture"></a> </span> <br>
       <link href="https://randomuser.me/photos"> <small> <i> Source: Randomuser.me </i> </small>
     <br><br>
